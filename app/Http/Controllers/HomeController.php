@@ -8,13 +8,15 @@ class HomeController extends Controller
 {
     //顯示所有資料
     public function index() {
-        $data = array();
-        $data['name'] = "Ray";
+        $title = "Ray's 個人網站";
 
-        return view('home', [
-            'data' => $data
-        ]);
+        $data = [
+            'title' => $title
+        ];
+
+        return view('home', $data);
     }
+    
     //新增一筆資料
     public function create() {
         //
