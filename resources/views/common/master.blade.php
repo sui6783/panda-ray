@@ -26,37 +26,9 @@
   <link href="/resources/css/jquery.minicolors.css" rel="stylesheet"/>
   <link href="/resources/css/jquery.filer.css" rel="stylesheet"/>
   <link href="/resources/css/style.css" rel="stylesheet"/>
-  <link href="/resources/css/web.css" rel="stylesheet"/>
+  <link href="/resources/css/web.css?20210725" rel="stylesheet"/>
   <link href="/resources/css/icofont.css" rel="stylesheet"/>
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->  
-  <script>
-    function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
-  </script>
-</head>
-<body>
-  <!-- Preloader -->
-  <div id="preloader">
-      <div class="preload-content">
-          <div id="original-load"></div>
-      </div>
-  </div>
 
-  <header class="header-area">
-    <div class="top-header">
-      <div class="container h-100">
-        
-      </div>
-    </div>
-  </header>
-  @yield('body')
-</body>
-<footer>
-</footer>
   <!-- jQuery -->
   <script src="/resources/js/jquery-2.1.1.min.js"></script>
   <script src="/resources/js/jquery-ui.min.js"></script>
@@ -80,6 +52,43 @@
   <script type="text/javascript" src="/resources/js/script.min.js"></script>
   <script type="text/javascript" src="/resources/js/jquery.minicolors.min.js"></script>
   <script type="text/javascript" src="/resources/js/bootstrap-tagsinput.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+    function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+  </script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+      <div class="preload-content">
+          <div id="original-load"></div>
+      </div>
+  </div>
+
+  <header class="header-area">
+    <div class="top-header">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <!-- Top Social Area -->
+          <div class="col-12">
+              <div class="top-social-area pull-right">
+                  <a href="/" data-toggle="tooltip" data-placement="bottom" title="首頁">Home</a>
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="關於作者">About</i></a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  @yield('body')
+</body>
+<footer>
+</footer>
   <script type="text/javascript">
     $(function(){
       var $window = $(window);
