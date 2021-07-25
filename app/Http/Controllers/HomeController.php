@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     //顯示所有資料
     public function index() {
-        $title = "Ray's 個人網站";
+        $title = "Ray's Website";
 
         $data = [
             'title' => $title

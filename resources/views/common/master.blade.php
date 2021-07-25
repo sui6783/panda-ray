@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="zh-TW">
   <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="SC">
+  <meta name="description" content="本網站為個人練習使用">
+  <meta name="author" content="Ray">
   <title>@yield('title')</title>
+  <link rel="icon" href="/favicon.ico">
   <!-- Bootstrap Core CSS -->
   <link href="/resources/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/resources/css/bootstrap/css/bootstrap-tagsinput.css" rel="stylesheet"/>
@@ -25,6 +26,7 @@
   <link href="/resources/css/jquery.minicolors.css" rel="stylesheet"/>
   <link href="/resources/css/jquery.filer.css" rel="stylesheet"/>
   <link href="/resources/css/style.css" rel="stylesheet"/>
+  <link href="/resources/css/web.css" rel="stylesheet"/>
   <link href="/resources/css/icofont.css" rel="stylesheet"/>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,29 +39,57 @@
   </script>
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+      <div class="preload-content">
+          <div id="original-load"></div>
+      </div>
+  </div>
+
+  <header class="header-area">
+    <div class="top-header">
+      <div class="container h-100">
+        
+      </div>
+    </div>
+  </header>
   @yield('body')
 </body>
-<!-- jQuery -->
-<script src="/resources/js/jquery-2.1.1.min.js"></script>
-<script src="/resources/js/jquery-ui.min.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="/resources/css/bootstrap/js/bootstrap.min.js"></script>
-<script src="/resources/js/moment-with-locales.js"></script>
-<script src="/resources/js/bootstrap-datetimepicker.js"></script>
-<!-- Metis Menu Plugin JavaScript -->
-<script src="/resources/css/metisMenu/metisMenu.min.js"></script>
+<footer>
+</footer>
+  <!-- jQuery -->
+  <script src="/resources/js/jquery-2.1.1.min.js"></script>
+  <script src="/resources/js/jquery-ui.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="/resources/css/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/resources/js/moment-with-locales.js"></script>
+  <script src="/resources/js/bootstrap-datetimepicker.js"></script>
+  <!-- Metis Menu Plugin JavaScript -->
+  <script src="/resources/css/metisMenu/metisMenu.min.js"></script>
 
-<!-- Morris Charts JavaScript -->
-<script src="/resources/js/raphael.min.js"></script>
-<script src="/resources/css/morrisjs/morris.min.js"></script>
-<!-- <script src="/new-sc-act/js/morris-data.js"></script> -->
+  <!-- Morris Charts JavaScript -->
+  <script src="/resources/js/raphael.min.js"></script>
+  <script src="/resources/css/morrisjs/morris.min.js"></script>
+  <!-- <script src="/new-sc-act/js/morris-data.js"></script> -->
 
-<!-- Custom Theme JavaScript -->
-<script src="/resources/js/sb-admin-2.js"></script>
-<script src="/resources/js/jquery.cookie.js"></script>
-<script src="/resources/js/jquery.jget.js"></script>
-<script src="/resources/js/swiper.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="/resources/js/script.min.js"></script>
-<script type="text/javascript" src="/resources/js/jquery.minicolors.min.js"></script>
-<script type="text/javascript" src="/resources/js/bootstrap-tagsinput.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="/resources/js/sb-admin-2.js"></script>
+  <script src="/resources/js/jquery.cookie.js"></script>
+  <script src="/resources/js/jquery.jget.js"></script>
+  <script src="/resources/js/swiper.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/resources/js/script.min.js"></script>
+  <script type="text/javascript" src="/resources/js/jquery.minicolors.min.js"></script>
+  <script type="text/javascript" src="/resources/js/bootstrap-tagsinput.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var $window = $(window);
+
+      // :: Preloader Active Code
+      $window.on('load', function () {
+        $('#preloader').fadeOut('slow', function () {
+            $(this).remove();
+        });
+      });
+    });
+  </script>
 </html>
