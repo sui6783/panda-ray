@@ -17,4 +17,8 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('/','App\Http\Controllers\HomeController@index');
+//Route::get('/','App\Http\Controllers\HomeController@index');
+
+Route::get('/','App\Http\Controllers\AboutController@index');
+
+Route::get('/about','App\Http\Controllers\AboutController@index');
