@@ -10,23 +10,8 @@ class AboutController extends Controller
     public function index() {
         $title = "個人名片 | Ray's Website";
 
-        $skills = array(
-            'JavaScript' => '65%',
-            'jQuery' =>'85%',
-            'HTML' => '95%',
-            'CSS' => '95%',
-            'PHP' => '95%',
-            'MySQL' => '90%',
-            'OpenCart' => '80%',
-            'Laravel' => '55%',
-            'Bootstrap' => '90%',
-            'SourceTree' => '85%',
-            'Ubuntu' => '60%'
-        );
-
         $data = [
-            'title' => $title,
-            'skills' => $skills
+            'title' => $title
         ];
 
         return view('about', $data);
