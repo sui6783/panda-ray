@@ -77,6 +77,15 @@
   <script>
     function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
   </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V03QLDZS0N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-V03QLDZS0N');
+  </script>
 </head>
 <body>
   <!-- Preloader -->
