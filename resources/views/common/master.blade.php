@@ -41,7 +41,7 @@
   <link href="/resources/css/jquery.minicolors.css" rel="stylesheet"/>
   <link href="/resources/css/jquery.filer.css" rel="stylesheet"/>
   <link href="/resources/css/style.css" rel="stylesheet"/>
-  <link href="/resources/css/web.css?20210728" rel="stylesheet"/>
+  <link href="/resources/css/web.css?20210730" rel="stylesheet"/>
   <link href="/resources/css/icofont.css" rel="stylesheet"/>
 
   <!-- jQuery -->
@@ -77,6 +77,7 @@
   <script>
     function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
   </script>
+  @if (isset($_SERVER['HTTPS']))
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V03QLDZS0N"></script>
   <script>
@@ -86,6 +87,7 @@
 
     gtag('config', 'G-V03QLDZS0N');
   </script>
+  @endif
 </head>
 <body>
   <!-- Preloader -->
@@ -103,7 +105,7 @@
           <div class="col-12">
               <div class="top-social-area pull-right">
                   <a href="/" data-toggle="tooltip" data-placement="bottom" title="首頁">Home</a>
-                  <a href="/about" data-toggle="tooltip" data-placement="bottom" title="關於作者">About</i></a>
+                  <a href="/about" data-toggle="tooltip" data-placement="bottom" title="個人名片">About</i></a>
               </div>
           </div>
         </div>
