@@ -24767,4 +24767,8 @@ span.value {
 	}
 }
 
-.fa { width: 16px; }
+@media (min-width: 1370px) {
+	.container {
+	    max-width: 100%;
+	}
+}
