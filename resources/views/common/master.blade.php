@@ -4,9 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="本網站為個人練習使用">
-  <meta name="author" content="Ray">
   <title>@yield('title')</title>
+  <meta name="description" content="本網站為個人練習使用">
+  <meta name="keywords" content="Ray's Website">
+  <meta name="author" content="Ray">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Ray's Website">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <link rel="apple-touch-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="144x114" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon.ico">
+  <link rel="apple-touch-startup-image" sizes="1242x2208" href="/favicon.ico">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px)" href="/favicon.ico">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px)" href="/favicon.ico">
+  <link href="/favicon.ico" rel="icon">
   <link rel="icon" href="/favicon.ico">
   <!-- Bootstrap Core CSS -->
   <link href="/resources/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,12 +42,13 @@
   <link href="/resources/css/jquery.minicolors.css" rel="stylesheet"/>
   <link href="/resources/css/jquery.filer.css" rel="stylesheet"/>
   <link href="/resources/css/style.css" rel="stylesheet"/>
-  <link href="/resources/css/web.css?20210726" rel="stylesheet"/>
+  <link href="/resources/css/web.css?20210730" rel="stylesheet"/>
   <link href="/resources/css/icofont.css" rel="stylesheet"/>
 
   <!-- jQuery -->
   <script src="/resources/js/jquery-2.1.1.min.js"></script>
   <script src="/resources/js/jquery-ui.min.js"></script>
+  <script src="/resources/js/popper.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
   <script src="/resources/css/bootstrap/js/bootstrap.min.js"></script>
   <script src="/resources/js/moment-with-locales.js"></script>
@@ -61,6 +78,17 @@
   <script>
     function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
   </script>
+  @if (isset($_SERVER['HTTPS']))
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V03QLDZS0N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-V03QLDZS0N');
+  </script>
+  @endif
 </head>
 <body>
   <!-- Preloader -->
@@ -78,7 +106,8 @@
           <div class="col-12">
               <div class="top-social-area pull-right">
                   <a href="/" data-toggle="tooltip" data-placement="bottom" title="首頁">Home</a>
-                  <a href="/about" data-toggle="tooltip" data-placement="bottom" title="關於作者">About</i></a>
+                  <a href="/about" data-toggle="tooltip" data-placement="bottom" title="個人名片">About</i></a>
+                  <a href="/lotto" data-toggle="tooltip" data-placement="bottom" title="台彩樂透獎號">台彩開獎</i></a>
               </div>
           </div>
         </div>
@@ -89,16 +118,16 @@
 </body>
 <footer>
 </footer>
-  <script type="text/javascript">
-    $(function(){
-      var $window = $(window);
+<script type="text/javascript">
+  $(function(){
+    var $window = $(window);
 
-      // :: Preloader Active Code
-      $window.on('load', function () {
-        $('#preloader').fadeOut('slow', function () {
-            $(this).remove();
-        });
+    // :: Preloader Active Code
+    $window.on('load', function () {
+      $('#preloader').fadeOut('slow', function () {
+          $(this).remove();
       });
     });
-  </script>
+  });
+</script>
 </html>
