@@ -21,3 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','App\Http\Controllers\AboutController@index');
 
 Route::get('/about','App\Http\Controllers\AboutController@index');
+
+Route::get('/lotto','App\Http\Controllers\LottoController@index');
+
+Route::post('/getLottoList', 'App\Http\Controllers\LottoController@getLottoList');

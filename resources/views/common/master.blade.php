@@ -12,6 +12,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Ray's Website">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="apple-touch-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="72x72" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="114x114" href="/favicon.ico">
@@ -106,6 +107,7 @@
               <div class="top-social-area pull-right">
                   <a href="/" data-toggle="tooltip" data-placement="bottom" title="首頁">Home</a>
                   <a href="/about" data-toggle="tooltip" data-placement="bottom" title="個人名片">About</i></a>
+                  <a href="/lotto" data-toggle="tooltip" data-placement="bottom" title="台彩樂透獎號">台彩開獎</i></a>
               </div>
           </div>
         </div>

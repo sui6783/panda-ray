@@ -440,6 +440,29 @@ body {
     top: -6px;
 }
 
+.md-tabs .nav-item.open .nav-link, .md-tabs .nav-item.open .nav-link:focus, .md-tabs .nav-item.open .nav-link:hover, .md-tabs .nav-link.active, .md-tabs .nav-link.active:focus, .md-tabs .nav-link.active:hover {
+    color: #01a9ac;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.md-tabs .nav-item a { padding: 20px 0!important; cursor: pointer; font-size: 0.8em; }
+.nav-tabs .slide {
+    background: #01a9ac;
+    width: calc(100%/4);
+    height: 4px;
+    position: absolute;
+    -webkit-transition: left .3s ease-out;
+    transition: left .3s ease-out;
+    bottom: 0;
+}
+.md-tabs .nav-item .nav-link.active~.slide {
+    opacity: 1;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
 @media screen and (max-width: 768px){
     #about-aside {
         position: relative;

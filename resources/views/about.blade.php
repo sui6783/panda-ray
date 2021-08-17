@@ -18,6 +18,7 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li class="active"><a href="/about">About</a></li>
+                <li><a href="/lotto">台彩開獎</a></li>
             </ul>
         </nav>
         <div class="about-footer">
